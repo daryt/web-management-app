@@ -1,7 +1,16 @@
 WebManagementApp::Application.routes.draw do
   devise_for :users
-  root "application#hello"
+  # root "application#hello"
 
+  unauthenticated :user do
+    devise_scope :user do
+      get "/" => 'home#welcome_page'
+    end
+  end
+
+  authenticate :user do
+    root :to => 'home#index'
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
