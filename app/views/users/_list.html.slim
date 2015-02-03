@@ -4,10 +4,14 @@ table class="table table-striped"
     tr
       th= "Email"
       th= "Role"
+      th= "Actions"
   tbody
     - users.each do |user|
       tr
         td= user.email 
         td= user.role
+        td           
+          = link_to "Change role", "#role-options-#{user.id}", :class => "btn btn-mini", :type => "button", "data-toggle" => "modal"
+          = render user
 
 

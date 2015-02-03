@@ -1,0 +1,16 @@
+.modal.fade id="role-options-#{user.id}" 
+  .modal-dialog
+    .modal-content
+      = simple_form_for(user, as: "user", url: admin_user_path(user.id), html: { method: :put, :class => 'form-horizontal' }) do |f| 
+        .modal-header
+          a.close data-dismiss="modal"  ×
+          h3 Change Role
+        .modal-body
+          = f.input :role, :collection => (User.roles.keys - ["admin"]), :as => :radio_buttons, :label_method => lambda {|t| t.titleize}, :label => false, :item_wrapper_class => 'inline' , :checked => user.role
+        .modal-footer
+          a.btn data-dismiss="modal" href="#"  Close
+          = f.submit "Change Role", :class => "btn btn-primary"
+
+
+css:
+  .form-group.radio_buttons.optional.user_role{ padding-left:100px; }
