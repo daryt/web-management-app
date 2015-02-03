@@ -58,6 +58,8 @@ gem 'haml'
 
 gem 'simple_form'
 gem 'slim'
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
