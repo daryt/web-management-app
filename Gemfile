@@ -47,12 +47,17 @@ gem "cancan", '1.6.10'
 
 # Twitter Bootstrap for UI
 gem "therubyracer"
+gem "less-rails"
 gem 'sprockets', '~> 2.0'
-gem "twitter-bootstrap-rails"
+#gem "twitter-bootstrap-rails"
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+
 
 # Haml
 gem 'haml'
 
+gem 'simple_form'
+gem 'slim'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

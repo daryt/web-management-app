@@ -1,6 +1,5 @@
 WebManagementApp::Application.routes.draw do
   devise_for :users
-  # root "application#hello"
 
   unauthenticated :user do
     devise_scope :user do

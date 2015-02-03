@@ -1,0 +1,15 @@
+.navbar.navbar-default.navbar-static-top
+  .container
+    button.navbar-toggle data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button" 
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+    = link_to "WebManagementApp", root_path, :class => "navbar-brand"
+    .navbar-collapse.collapse.navbar-responsive-collapse
+      ul.nav.navbar-nav
+        li= link_to "Link1", "#"
+        li= link_to "Link2", "#"
+        li= link_to "Link3", "#"
+        - if user_signed_in?
+          li= link_to "Logout", destroy_user_session_path, method: 'delete'
+        li
